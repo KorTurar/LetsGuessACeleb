@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity"
+    android:layout_weight="100"
+    android:orientation="vertical"
+    android:layout_margin="0dp"
+    android:padding="0dp"
+    android:background="@color/black"
+    android:id="@+id/gameParentRelativeLayout">
+
+    <LinearLayout
+        android:layout_weight="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentTop="true"
+        android:weightSum="100"
+        android:id="@+id/timeAndPercentLinearLayout"
+        android:orientation="horizontal"
+        android:background="@drawable/game_layout_bg">
+        <!--
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:id="@+id/timeView"
+            android:textSize="50sp"
+            android:text="00:00"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"/>-->
+        <Chronometer
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:id="@+id/my_chronometer"
+            android:gravity="center"
+            android:textColor="#004bff"
+            android:textSize="50sp"/>
+
+        <TextView
+            android:id="@+id/percentView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:text="0%"
+            android:textSize="50sp"
+            android:background="#004bff"
+            android:textColor="#ffffff"
+            android:textAlignment="center"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="center_horizontal"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/menuImB"
+            android:background="@null"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/icons8"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:padding="0dp"
+        android:layout_weight="80"
+        android:layout_below="@+id/timeAndPercentLinearLayout"
+        android:id="@+id/imAreaRelLay">
+        <!--<ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+
+            android:id="@+id/celebImView"/>
+        <com.example.guessaceleb.CanvasView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>-->
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/answerOptionsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyTheme"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="10"
+        android:text="ВАРИАНТЫ"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
